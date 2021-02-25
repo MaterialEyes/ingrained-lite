@@ -235,9 +235,6 @@ Make adjustments to the <code>frame_selection</code> argument passed to [print_f
 ```sh
 bash make_movie.sh
 ```
-Ingrained: an automated framework for fusing materials imaging simulations into experiments
-
-
 ## Citation
 If you find EXSCLAIM! useful, please encourage its development by citing the following paper in your research:
 ```sh
