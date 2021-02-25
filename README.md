@@ -14,53 +14,22 @@ STM structure validation from simulated images of partial charge densities volum
 
 
 ## Getting started
+  If you are interested in using this tool in your research, please send an email to ingrained@materialeyes.org and we will provide you with access to the full repository
   
-### Requirements
-To install *ingrained*, you need:
-  * python 3.x 
-  * a conda package manager to configure the basic installation environment
-  * [Materials Project API key](https://materialsproject.org/open)
-
-### Installation
-The following will install a local copy of *ingrained* and create a custom [conda](https://docs.conda.io/en/latest/) development environment for both STEM and STM functionalities.
-
-Clone this repo and navigate to the root directory:
-```sh
-git clone https://github.com/MaterialEyes/ingrained
-cd ingrained
-```
-Create the environment from the <code>environment.yml</code> file and activate it:
-```sh
-conda env create -f utils/environment.yml
-conda activate ingrained
-```
-Set your [Materials Project API key](https://materialsproject.org/open) "MAPI_KEY" environment variable:
-```python
-./utils/set_key.sh mYaPiKeY
-```
-Install additional (external) packages to parse standard experimental files (i.e. dm3, sxm, etc...)
-```sh
-./utils/install_parsers.sh
-```
-## *ingrained* workflow
-1. Isolate a clean region of an experimental image, and preprocess if necessary (*i.e. Wiener filter, contrast enhancement, etc.*)
-2. Initialize a *structure* object from an appropriate classes in [structure.py](https://github.com/MaterialEyes/ingrained/blob/master/ingrained/structure.py). For grain boundaries, a <code>Bicrystal()</code> object requires a path to a configuration file, <code>config.json</code>. For STM structure validation, a <code>PartialCharge()</code> object requires a path to a <code>PARCHG</code> file.
-3. Initialize an *optimize* object from the <code>ConguityBuilder()</code> class in [optimize.py](https://github.com/MaterialEyes/ingrained/blob/master/ingrained/optimize.py), by passing in the current *structure* object and the prepared experimental image.
-4. Run the optimization by calling the <code>find_correspondence</code> method of the <code>ConguityBuilder()</code>, with a *reasonable* initial set of input parameters. Better initial approximations often lead to better final solutions!
 
 ## Examples
 
-The [clean_templates](https://github.com/MaterialEyes/ingrained/tree/master/examples/clean_templates) folder in the examples directory provides a collection of minimal working examples. For the full examples containing structures and record of the optimization progress (as outlined in the [paper](https://)), refer to the [completed_runs](https://github.com/MaterialEyes/ingrained/tree/master/examples/completed_runs) folder.
+Here we provide a collection of examples containing structures and record of the optimization progress. Refer to the [completed_runs](https://github.com/MaterialEyes/ingrained-demo/blob/main/examples/completed_runs) folder.
 
 ### Ex. 1: Grain boundary structure initialization from HAADF STEM
 
 Here, we outline the contents of the [example](https://github.com/MaterialEyes/ingrained/tree/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt) given for a [CdTe [110]-[110] tilt grain boundary](https://aip.scitation.org/doi/10.1063/1.5123169) structure 
 
-(1) Experimental target image ([HAADF149.dm3](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/HAADF149.dm3)).
+(1) Experimental target image ([HAADF149.dm3](https://github.com/MaterialEyes/ingrained-demo/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/HAADF149.dm3)).
 
 <img src="https://drive.google.com/uc?export=view&id=19OdPSowDw4k2O5oEn5u9h7OjPliSQqE6" alt="alt text" width="300" height="319">
 
-(2) Configuration file ([config.json](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/config.json)) to specify parameters and settings for bicrystal crystal construction.
+(2) Configuration file ([config.json](https://github.com/MaterialEyes/ingrained-demo/blob/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/config.json)) to specify parameters and settings for bicrystal crystal construction.
 ```
 {
 	"slab_1":{
@@ -266,14 +235,15 @@ Make adjustments to the <code>frame_selection</code> argument passed to [print_f
 ```sh
 bash make_movie.sh
 ```
-## Future Development
-- [ ] Implement additional image similarity measurements (i.e. VIFP, etc).
-- [ ] Cutoff <code>z_above</code> parameter in [PartialCharge()](https://github.com/MaterialEyes/ingrained/blob/master/ingrained/structure.py) when it extends beyond height of charge surface.
-- [ ] Consolidate configuration and optimization parameters to improve automation.
-- [ ] Work to speedup bicrystal construction.
-- [ ] Create Python package.
+Ingrained: an automated framework for fusing materials imaging simulations into experiments
+
 
 ## Citation
+If you find EXSCLAIM! useful, please encourage its development by citing the following paper in your research:
+```sh
+Schwenker, E., Kolluru, V. S. C., Spreadbury, T., Guo, J., Hu, X., Dravid, V., Klie, R., Guest, J., Chan, M.K.Y, Ingrained: an automated framework for fusing materials imaging simulations into experiments. **in preparation** (2021)
+```
+
 If you find this code useful, please consider citing our [paper](#paper)
 ```sh
 @article{,
