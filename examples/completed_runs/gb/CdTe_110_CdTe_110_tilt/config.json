@@ -1,0 +1,31 @@
+{
+	"slab_1":{
+		"chemical_formula":"CdTe",
+		"space_group":"F-43m",
+		"uvw_project":[1,1,0],
+		"uvw_upward":[-1,1,0],
+		"tilt_angle":8,
+		"max_dimension":40,
+		"flip_species":false
+	},
+	"slab_2":{
+		"chemical_formula":"CdTe",
+		"space_group":"F-43m",
+		"uvw_project":[1,1,0],
+		"uvw_upward":[0,0,1],
+		"tilt_angle":0,
+		"max_dimension":40,
+		"flip_species":false
+	},
+	"constraints":{
+		"min_width":30,
+		"max_width":60,
+		"min_depth":8,
+		"max_depth":20,
+		"interface_1_width": 0,
+		"interface_2_width": 0,
+		"collision_removal":[true,true],
+		"pixel_size":""
+	},
+	"structure_file":"bicrystal.POSCAR.vasp"
+}

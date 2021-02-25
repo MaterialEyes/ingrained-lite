@@ -1,0 +1,2 @@
+Raw microscopy image provided by authors of:
+Guo, Jinglong, et al. "Effect of selenium and chlorine co-passivation in polycrystalline CdSeTe devices." Applied Physics Letters 115.15 (2019): 153901.

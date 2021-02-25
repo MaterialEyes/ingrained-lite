@@ -1,0 +1,1 @@
+gdown -O Cu2O_111_PARCHG https://drive.google.com/uc?id=1Eeq8VkUokllGwCdObUAPmYP0JLL0RGtU

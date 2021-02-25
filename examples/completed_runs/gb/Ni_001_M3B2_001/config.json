@@ -1,0 +1,31 @@
+{
+        "slab_1":{
+                "chemical_formula":"B2Mo3",
+                "space_group":"P4/mbm",
+                "uvw_project":[0,0,-1],
+                "uvw_upward":[1,0,0],
+                "tilt_angle":0,
+                "max_dimension":25,
+                "flip_species":false
+        },
+        "slab_2":{
+                "chemical_formula":"Ni",
+                "space_group":"Fm-3m",
+                "uvw_project":[0,0,-1],
+                "uvw_upward":[3,1,0],
+                "tilt_angle":0,
+                "max_dimension":25,
+                "flip_species":false
+        },
+        "constraints":{
+                "min_width":12,
+                "max_width":40,
+                "min_depth":12,
+                "max_depth":30,
+                "interface_1_width": 1,
+                "interface_2_width": 1.5,
+                "collision_removal":[true,true],
+                "pixel_size":""
+        },
+        "structure_file":"bicrystal.POSCAR.vasp"
+}

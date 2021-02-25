@@ -1,0 +1,2 @@
+STM image provided by authors of:
+Zhang, Rui, et al. "Atomistic determination of the surface structure of Cu 2 O (111): experiment and theory." Physical Chemistry Chemical Physics 20.43 (2018): 27456-27463.

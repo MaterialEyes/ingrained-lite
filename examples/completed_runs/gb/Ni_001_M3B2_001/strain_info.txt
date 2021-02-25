@@ -1,0 +1,8 @@
+------------------------------
+Strain in top grain (%)
+  >> width (along b) : -4.303
+  >> depth (along a) : -0.438
+Strain in bottom grain (%)
+  >> width (along b) : 4.708
+  >> depth (along a) : 0.442
+------------------------------
