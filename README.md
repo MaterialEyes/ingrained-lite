@@ -23,13 +23,13 @@ Here we provide a collection of examples containing structures and record of the
 
 ### Ex. 1: Grain boundary structure initialization from HAADF STEM
 
-Here, we outline the contents of the [example](https://github.com/MaterialEyes/ingrained/tree/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt) given for a [CdTe [110]-[110] tilt grain boundary](https://aip.scitation.org/doi/10.1063/1.5123169) structure 
+Here, we outline the contents of the [example](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt) given for a [CdTe [110]-[110] tilt grain boundary](https://aip.scitation.org/doi/10.1063/1.5123169) structure 
 
-(1) Experimental target image ([HAADF149.dm3](https://github.com/MaterialEyes/ingrained-demo/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/HAADF149.dm3)).
+(1) Experimental target image ([HAADF149.dm3](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/HAADF149.dm3)).
 
 <img src="https://drive.google.com/uc?export=view&id=19OdPSowDw4k2O5oEn5u9h7OjPliSQqE6" alt="alt text" width="300" height="319">
 
-(2) Configuration file ([config.json](https://github.com/MaterialEyes/ingrained-demo/blob/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/config.json)) to specify parameters and settings for bicrystal crystal construction.
+(2) Configuration file ([config.json](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/config.json)) to specify parameters and settings for bicrystal crystal construction.
 ```
 {
 	"slab_1":{
@@ -84,7 +84,7 @@ Summary of configuration parameters:
 > *optional*
 > -  structure_file: bypass the construction and initialize <code>Bicrystal()</code> object with existing structure
 
-(3) Python script to execute steps of the *ingrained* workflow ([run.py](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/run.py)).
+(3) Python script to execute steps of the *ingrained* workflow ([run.py](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/run.py)).
 ```python
 
 import sys
@@ -138,13 +138,13 @@ Summary of optimization parameters:
 
 ### Ex. 2: STM structure validation from simulated PARCHG images
 
-Here, we outline the contents of the [example](https://github.com/MaterialEyes/ingrained/tree/master/examples/completed_runs/stm/Cu2O_111) given for a [Cu<sub>2</sub>O(111)](https://pubs.rsc.org/en/content/articlelanding/2018/cp/c8cp06023a#!divAbstract) surface
+Here, we outline the contents of the [example](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/stm/Cu2O_111) given for a [Cu<sub>2</sub>O(111)](https://pubs.rsc.org/en/content/articlelanding/2018/cp/c8cp06023a#!divAbstract) surface
 
-(1) Experimental target image (cropped) ([03h_Cu2O_111_034_fwd_z_plane.txt](https://github.com/MaterialEyes/ingrained/tree/master/examples/completed_runs/stm/03h_Cu2O_111_034_fwd_z_plane.txt)).
+(1) Experimental target image (cropped) ([03h_Cu2O_111_034_fwd_z_plane.txt](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/stm/03h_Cu2O_111_034_fwd_z_plane.txt)).
 
 <img src="https://drive.google.com/uc?export=view&id=1XTzx4OEc_Ljy4L9-HZvyUGEaAnBD888Y" alt="alt text" width="300" height="319">
 
-(2) Configuration file ([PARCHG](https://github.com/MaterialEyes/ingrained/tree/master/examples/completed_runs/stm/Cu2O_111/parchg_download.sh)) which provides the partial charge densities from a DFT-simulation.
+(2) Configuration file ([PARCHG](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/stm/Cu2O_111/parchg_download.sh)) which provides the partial charge densities from a DFT-simulation.
 
 This file will need to be downloaded, as it is not stored in the repo.
 ```sh
@@ -212,7 +212,7 @@ Summary of optimization parameters:
 > -  crop_height: final (cropped) image height in pixels
 > -  crop_width: final (cropped) image width in pixels
 
-(4) Python script for final relaxation of <code>z_above</code> parameter ([relax_z_above.py](https://github.com/MaterialEyes/ingrained/tree/master/examples/completed_runs/stm/Cu2O_111/relax_z_above.py))
+(4) Python script for final relaxation of <code>z_above</code> parameter ([relax_z_above.py](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/stm/Cu2O_111/relax_z_above.py))
 
 Run only after <code>find_correspondence</code> has completed. Currently, <code>z_above</code> acts as a free variable 
 once it exceeds the top of the charge surface, and optimization may make this value arbitarily high when the best solution 
@@ -222,15 +222,15 @@ is at the top of the surface. This function ensures that <code>z_above</code> re
 ### Output
 
 Execution of the sequence outlined in [run.py]() will produce:
- * [bicrystal.POSCAR.vasp](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/HAADF149.POSCAR.vasp) - (Ex. 1 only) a POSCAR of the newly constructed bicrystal  
- * [strain_info.txt](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/strain_info) - (Ex. 1 only) record of the amount of strain in each bicrystal grain (given as % along width and depth)
- * [progress.txt](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/progress.txt) - record of the optimization solution and the respective figure-of-merit (FOM) at each optimization step.
+ * [bicrystal.POSCAR.vasp](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/HAADF149.POSCAR.vasp) - (Ex. 1 only) a POSCAR of the newly constructed bicrystal  
+ * [strain_info.txt](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/strain_info) - (Ex. 1 only) record of the amount of strain in each bicrystal grain (given as % along width and depth)
+ * [progress.txt](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/progress.txt) - record of the optimization solution and the respective figure-of-merit (FOM) at each optimization step.
 
 Additional tools are included to view and write optimization progress to a movie 
-* [print_frames.py](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/print_frames.py) - writes specified optimization steps (frames) to custom image panels (.png)
-* [make_movie.sh](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/make_movie.sh) - wrapper around [FFmpeg](https://ffmpeg.org/) to create a movie from the sequence of panels created in [print_frames.py](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/print_frames.py)
+* [print_frames.py](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/print_frames.py) - writes specified optimization steps (frames) to custom image panels (.png)
+* [make_movie.sh](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/make_movie.sh) - wrapper around [FFmpeg](https://ffmpeg.org/) to create a movie from the sequence of panels created in [print_frames.py](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/print_frames.py)
 
-Make adjustments to the <code>frame_selection</code> argument passed to [print_frames.py](https://github.com/MaterialEyes/ingrained/blob/master/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/print_frames.py) to customize the output, or just choose "all" to print all steps of the optimization. With the frames printed, make a movie outlining the progress by simply running:
+Make adjustments to the <code>frame_selection</code> argument passed to [print_frames.py](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/print_frames.py) to customize the output, or just choose "all" to print all steps of the optimization. With the frames printed, make a movie outlining the progress by simply running:
 
 ```sh
 bash make_movie.sh
@@ -244,20 +244,6 @@ If you find EXSCLAIM! useful, please encourage its development by citing the fol
 Schwenker, E., Kolluru, V. S. C., Spreadbury, T., Guo, J., Hu, X., Dravid, V., Klie, R., Guest, J., Chan, M.K.Y, Ingrained: an automated framework for fusing materials imaging simulations into experiments. **in preparation** (2021)
 ```
 
-If you find this code useful, please consider citing our [paper](#paper)
-```sh
-@article{,
-  title={},
-  author={},
-  journal={},
-  volume={},
-  number={},
-  pages={},
-  year={},
-  publisher={}
-}
-```
-
 ## Acknowledgements <a name="credits"></a>
 This material is based upon work supported by Laboratory Directed Research and Development (LDRD) funding from Argonne National Laboratory, provided by the Director, Office of Science, of the U.S. Department of Energy under Contract No. DE-AC02-06CH11357
 
@@ -265,4 +251,3 @@ This work was performed at the Center for Nanoscale Materials, a U.S. Department
 
 We gratefully acknowledge the computing resources provided on Bebop, a high-performance computing cluster operated by the Laboratory Computing Resource Center at Argonne National Laboratory.
 
-## License <a name="license"></a>
