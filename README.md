@@ -221,9 +221,9 @@ is at the top of the surface. This function ensures that <code>z_above</code> re
 
 ### Output
 
-Execution of the sequence outlined in [run.py]() will produce:
+Execution of the sequence outlined in [run.py](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/run.py) will produce:
  * [bicrystal.POSCAR.vasp](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/bicrystal.POSCAR.vasp) - (Ex. 1 only) a POSCAR of the newly constructed bicrystal  
- * [strain_info.txt](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/strain_info) - (Ex. 1 only) record of the amount of strain in each bicrystal grain (given as % along width and depth)
+ * [strain_info.txt](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/strain_info.txt) - (Ex. 1 only) record of the amount of strain in each bicrystal grain (given as % along width and depth)
  * [progress.txt](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/progress.txt) - record of the optimization solution and the respective figure-of-merit (FOM) at each optimization step.
 
 Additional tools are included to view and write optimization progress to a movie 
