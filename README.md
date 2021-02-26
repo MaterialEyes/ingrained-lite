@@ -17,7 +17,7 @@ STM structure validation from simulated images of partial charge densities volum
   
 ## Examples
 
-The following are a collection of examples containing structures and record of the optimization progress. Refer to the [completed_runs](https://github.com/MaterialEyes/ingrained-demo/blob/main/examples/completed_runs) folder. Some of the steps mentioned may refer to functionality that exists only in the full version. Please contact us to gain further access. 
+The following are a collection of examples containing structures and record of the optimization progress. Refer to the [completed_runs](https://github.com/MaterialEyes/ingrained-demo/blob/main/examples/completed_runs) folder. Some of the steps mentioned - particularly those referencing a [run.py](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/run.py) file -  refer to functionality that exists only in the full version. Please contact us to gain further access. 
 
 ### Ex. 1: Grain boundary structure initialization from HAADF STEM
 
@@ -144,7 +144,7 @@ Here, we outline the contents of the [example](https://github.com/MaterialEyes/i
 
 (2) Configuration file ([PARCHG](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/stm/Cu2O_111/parchg_download.sh)) which provides the partial charge densities from a DFT-simulation.
 
-This file will need to be downloaded, as it is not stored in the repo. (NOTE: must have access to full version to run download script). 
+This file will need to be downloaded, as it is not stored in the repo. 
 ```sh
 bash parchg_download.sh 
 ```
