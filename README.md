@@ -1,4 +1,4 @@
-![image](https://drive.google.com/uc?export=view&id=1H3PYFTqZpiytEAR4KFbFV_7U2bKUWyUV)
+![image](https://github.com/MaterialEyes/ingrained-lite/blob/main/img/IG_WP_1.png)
 
 | :hammer_and_pick:| An automated framework for fusing materials imaging simulations into experiments. |
 |---------------|:------------------------|
@@ -6,20 +6,18 @@
 ## Current features
 Grain boundary structure initialization from atomic-resolution HAADF STEM imaging ([CdTe [110]-[110] tilt grain boundary](https://aip.scitation.org/doi/10.1063/1.5123169))
 
-<img src="https://drive.google.com/uc?export=view&id=1UpoiBue9R7rgBNWvk584Ozc85luHSY7Y" alt="alt text" width="704" height="260">
+![image](https://github.com/MaterialEyes/ingrained-lite/blob/main/img/ingrained.gif)
   
 STM structure validation from simulated images of partial charge densities volumes from DFT-simulation ([Cu<sub>2</sub>O(111)](https://pubs.rsc.org/en/content/articlelanding/2018/cp/c8cp06023a#!divAbstract))
 
-<img src="https://drive.google.com/uc?export=view&id=1C46_e0WO0ajaQ_ON_EWi9tZeL_RNjcJ8" alt="alt text" width="704" height="260">
-
+![image](https://github.com/MaterialEyes/ingrained-lite/blob/main/img/ingrained-stm.gif)
 
 ## Getting started
-  If you are interested in using this tool in your research, please send an email to ingrained@materialeyes.org and we will provide you with access to the full repository
+  If you are interested in using this tool in your research, please send an email to ingrained@materialeyes.org and you will be granted access to the full repository.
   
-
 ## Examples
 
-Here we provide a collection of examples containing structures and record of the optimization progress. Refer to the [completed_runs](https://github.com/MaterialEyes/ingrained-demo/blob/main/examples/completed_runs) folder.
+The following are a collection of examples containing structures and record of the optimization progress. Refer to the [completed_runs](https://github.com/MaterialEyes/ingrained-demo/blob/main/examples/completed_runs) folder. Some of the steps mentioned may refer to functionality that exists only in the full version. Please contact us to gain further access. 
 
 ### Ex. 1: Grain boundary structure initialization from HAADF STEM
 
@@ -27,7 +25,7 @@ Here, we outline the contents of the [example](https://github.com/MaterialEyes/i
 
 (1) Experimental target image ([HAADF149.dm3](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/HAADF149.dm3)).
 
-<img src="https://drive.google.com/uc?export=view&id=19OdPSowDw4k2O5oEn5u9h7OjPliSQqE6" alt="alt text" width="300" height="319">
+![image](https://github.com/MaterialEyes/ingrained-lite/blob/main/img/HAADF149.png)
 
 (2) Configuration file ([config.json](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/gb/CdTe_110_CdTe_110_tilt/config.json)) to specify parameters and settings for bicrystal crystal construction.
 ```
@@ -142,11 +140,11 @@ Here, we outline the contents of the [example](https://github.com/MaterialEyes/i
 
 (1) Experimental target image (cropped) ([03h_Cu2O_111_034_fwd_z_plane.txt](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/stm/03h_Cu2O_111_034_fwd_z_plane.txt)).
 
-<img src="https://drive.google.com/uc?export=view&id=1XTzx4OEc_Ljy4L9-HZvyUGEaAnBD888Y" alt="alt text" width="300" height="319">
+![image](https://github.com/MaterialEyes/ingrained-lite/blob/main/img/cu2o_111.png)
 
 (2) Configuration file ([PARCHG](https://github.com/MaterialEyes/ingrained-lite/tree/main/examples/completed_runs/stm/Cu2O_111/parchg_download.sh)) which provides the partial charge densities from a DFT-simulation.
 
-This file will need to be downloaded, as it is not stored in the repo.
+This file will need to be downloaded, as it is not stored in the repo. (NOTE: must have access to full version to run download script). 
 ```sh
 bash parchg_download.sh 
 ```
