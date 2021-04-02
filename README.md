@@ -4,6 +4,7 @@
 |---------------|:------------------------|
 
 ## Current features
+
 Grain boundary structure initialization from atomic-resolution HAADF STEM imaging ([CdTe [110]-[110] tilt grain boundary](https://aip.scitation.org/doi/10.1063/1.5123169))
 
 ![image](https://github.com/MaterialEyes/ingrained-lite/blob/main/img/ingrained.gif)
@@ -11,6 +12,12 @@ Grain boundary structure initialization from atomic-resolution HAADF STEM imagin
 STM structure validation from simulated images of partial charge densities volumes from DFT-simulation ([Cu<sub>2</sub>O(111)](https://pubs.rsc.org/en/content/articlelanding/2018/cp/c8cp06023a#!divAbstract))
 
 ![image](https://github.com/MaterialEyes/ingrained-lite/blob/main/img/ingrained-stm.gif)
+
+## See _ingrained_ in action!
+The _ingrained_ toolkit was used with first principles modeling to help pin down the structure of hydrogenated borophene. For more details, refer the [full article](https://science.sciencemag.org/content/371/6534/1143), featured on cover of [Science](https://science.sciencemag.org/)!
+<p align="center">
+	<img src="https://science.sciencemag.org/sites/default/files/styles/sci_issue_archive_cover/public/highwire/sci/371/6534.cover-source.gif?itok=PF30TuUK">
+</p>
 
 ## Getting started
   If you are interested in using this tool in your research, please send an email to ingrained@materialeyes.org and you will be granted access to the full repository.
